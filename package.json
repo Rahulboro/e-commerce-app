@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce-app",
+  "version": "1.0.0",
+  "description": "Ecommerce-Project by ujjal",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "ujjal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.0.0",
+    "nodemon": "^3.0.1"
+  }
+}
