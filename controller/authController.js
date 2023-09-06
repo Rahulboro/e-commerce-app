@@ -1,4 +1,1 @@
-const registerControler = () =>{
-
-}
-export default {registerControler}
+export const registerControler = () => {};

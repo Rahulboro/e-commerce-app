@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express';
 import morgan  from 'morgan';
 import connectToDb from './config/db.js';
+import authRoutes from './routes/authRoutes.js'
 
 
 // configure dotenv 
@@ -11,9 +12,15 @@ connectToDb();
 
 // rest Object
 const app = express()
+
 //middlewares 
 app.use(express.json())
 app.use(morgan(`dev`)); // for parsing application/json
+
+// routes 
+app.use("./", (req, res)=>{
+    res.send("<h2>Welcome to Ecommerce app<h2/>")
+})
 
 // rest API 
 app.get('/',(req,res)=>{
