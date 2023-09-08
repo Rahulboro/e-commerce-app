@@ -1,5 +1,6 @@
 import usermodel from '../models/userModel.js'
 import { hashpassword } from '../utils/authUtils.js';
+import JWT from 'jsonwebtoken';
 export const registerControler = async(req,res) => {
     try {
         const {name,email,password,phone,address}= req.body     
