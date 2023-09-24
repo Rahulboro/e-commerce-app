@@ -1,13 +1,19 @@
-import express from 'express'
-import {registerControler, loginController} from '../controller/authController.js'
+import express from "express";
+import {
+  registerControler,
+  loginController,
+} from "../controller/authController.js";
 
- // router object 
-const router = new express.Router()
+// router object
+const router = new express.Router();
 
 //routing object
-router.post('/register', registerControler )
+router.post("/register", registerControler);
 
-// LOGIN POST 
-router.post('/login', loginController)
+// LOGIN POST
+router.post("/login", loginController);
 
-export default router
+// test routes
+router.get("test", testController);
+
+export default router;
