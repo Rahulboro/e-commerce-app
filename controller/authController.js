@@ -77,7 +77,7 @@ export const loginController = async (req, res) => {
         .send({ success: false, message: "Wrong password" });
     }
     // creating token
-    const token = JWT.sign({ _id: user._id }, process.env.JWTSECRET, {
+    const token = await JWT.sign({ _id: user._id }, process.env.JWTSECRET, {
       expiresIn: "36h",
     });
     res.status(200).send({
@@ -103,5 +103,5 @@ export const loginController = async (req, res) => {
 
 // test Controller
 export const testController = (req, res) => {
-  console.log("protected routes");
+  res.send("protected routes");
 };
